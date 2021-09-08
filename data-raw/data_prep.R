@@ -1,6 +1,8 @@
 library(sf)
 library(ggplot2)
 
+# reference: https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
+
 # loal files from local
 hsinchu_bus_route=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/csv_files/hsinchu_bus_route.csv")
 hsinchu_scenicSpot=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/csv_files/hsinchu_scenicSpot.csv")
@@ -13,6 +15,7 @@ taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/S
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv", fileEncoding="UTF-8")
+school=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
 
 
 # Add data files to project
@@ -43,9 +46,10 @@ devtools::install_github("ChiaJung-Yeh/TWspdata")
 library(TWspdata)
 
 
+TWspdata::hsinchu_scenicSpot
 
-class(taipei_village_map)
 
-ggplot(taipei_village_map)+
-  geom_sf()
+ggplot()+
+  geom_sf(data=taipei_mrt_route, size=1)+
+  geom_sf(data=taipei_cycle_path, color="blue")
 
