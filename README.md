@@ -1,1 +1,2 @@
 # TWspdata
+TWspdata provides spatial data of Taiwan. Data provided are mainly for the use of examples in book Spatial Analysis with R. Please refer to the Bookdown website attached below. https://chiajung-yeh.github.io/Spatial-Analysis/

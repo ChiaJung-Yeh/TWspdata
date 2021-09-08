@@ -34,7 +34,7 @@ usethis::use_git()
 
 
 # after uploading, remember to push to GitHub in Terminal
-# git push -u origin master
+# git push -u origin main
 
 # download the files from my GitHub
 devtools::install_github("ChiaJung-Yeh/TWspdata")
