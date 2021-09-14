@@ -12,10 +12,11 @@ taipei_mrt_route=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Projec
 taipei_mrt_station=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station.shp")
 taipei_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_youbike/taipei_youbike.shp")
 taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_county/taiwan_county.shp")
+taiwan_
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv", fileEncoding="UTF-8")
-school=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
+taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
 
 
 # Add data files to project
@@ -30,6 +31,7 @@ usethis::use_data(taiwan_county, overwrite=T)
 usethis::use_data(TRA_line, overwrite=T)
 usethis::use_data(TRA_ridership, overwrite=T)
 usethis::use_data(TRA_station, overwrite=T)
+usethis::use_data(school, overwrite=T)
 
 
 # upload the files to GitHub
