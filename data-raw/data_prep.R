@@ -21,7 +21,7 @@ TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv", fileEncoding="UTF-8")
 taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
 taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
-
+write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station_buf.shp", layer_options="ENCODING=UTF-8")
 
 # Add data files to project
 usethis::use_data(hsinchu_bus_route, overwrite=T)
