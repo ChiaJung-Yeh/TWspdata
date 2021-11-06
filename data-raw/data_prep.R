@@ -1,4 +1,5 @@
 library(sf)
+library(dplyr)
 library(ggplot2)
 
 # reference: https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
@@ -8,6 +9,7 @@ hsinchu_bus_route=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Proj
 hsinchu_scenicSpot=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/csv_files/hsinchu_scenicSpot.csv")
 taipei_cycle_path=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_cycle_path/taipei_cycle_path.shp")
 taipei_village_map=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_map/taipei_village_map.shp")
+taipei_village_map=mutate(taipei_village_map, PPDENS=PP/as.numeric(st_area(taipei_village_map))*1000000)
 taipei_mrt_route=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_route.shp")
 taipei_mrt_station=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station.shp")
 taipei_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_youbike/taipei_youbike.shp")
@@ -18,6 +20,7 @@ TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spati
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv", fileEncoding="UTF-8")
 taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
+taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
 
 
 # Add data files to project
@@ -35,6 +38,7 @@ usethis::use_data(TRA_line, overwrite=T)
 usethis::use_data(TRA_ridership, overwrite=T)
 usethis::use_data(TRA_station, overwrite=T)
 usethis::use_data(taiwan_school, overwrite=T)
+usethis::use_data(taipei_mrt_station_buf, overwrite=T)
 
 
 # upload the files to GitHub
