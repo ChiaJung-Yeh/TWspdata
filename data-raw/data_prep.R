@@ -11,8 +11,9 @@ taipei_village_map=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Proj
 taipei_mrt_route=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_route.shp")
 taipei_mrt_station=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station.shp")
 taipei_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_youbike/taipei_youbike.shp")
-taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_county/taiwan_county.shp")
-taiwan_
+taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_county.shp")
+taiwan_town=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_town.shp")
+taiwan_village=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_village.shp")
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv", fileEncoding="UTF-8")
@@ -28,10 +29,12 @@ usethis::use_data(taipei_mrt_route, overwrite=T)
 usethis::use_data(taipei_mrt_station, overwrite=T)
 usethis::use_data(taipei_youbike, overwrite=T)
 usethis::use_data(taiwan_county, overwrite=T)
+usethis::use_data(taiwan_town, overwrite=T)
+usethis::use_data(taiwan_village, overwrite=T)
 usethis::use_data(TRA_line, overwrite=T)
 usethis::use_data(TRA_ridership, overwrite=T)
 usethis::use_data(TRA_station, overwrite=T)
-usethis::use_data(school, overwrite=T)
+usethis::use_data(taiwan_school, overwrite=T)
 
 
 # upload the files to GitHub
@@ -44,10 +47,10 @@ usethis::use_git()
 
 
 # download the files from my GitHub
-devtools::install_github("ChiaJung-Yeh/TWspdata")
+devtools::install_github("ChiaJung-Yeh/TWspdata", force=T)
 library(TWspdata)
 
-
+TWspdata::taiwan_county
 TWspdata::hsinchu_scenicSpot
 
 
