@@ -54,7 +54,7 @@ usethis::use_git()
 devtools::install_github("ChiaJung-Yeh/TWspdata", force=T)
 library(TWspdata)
 
-TWspdata::taiwan_county
+TWspdata::TRA_station
 TWspdata::hsinchu_scenicSpot
 
 
