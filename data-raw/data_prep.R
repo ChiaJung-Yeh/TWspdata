@@ -4,7 +4,7 @@ library(ggplot2)
 
 # reference: https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
 
-# loal files from local
+# load files from local
 hsinchu_bus_route=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/csv_files/hsinchu_bus_route.csv")
 hsinchu_scenicSpot=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/csv_files/hsinchu_scenicSpot.csv")
 taipei_cycle_path=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_cycle_path/taipei_cycle_path.shp")
@@ -21,6 +21,19 @@ TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Sp
 taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
 taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
 write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station_buf.shp", layer_options="ENCODING=UTF-8")
+
+
+
+# Hsinchu Data
+hs_bus_route=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/bus_route_hsinchu.shp") %>% select(-DRTS_ty)
+colnames(hs_bus_route)=c("RouteUID","RouteName","SubRouteUID","Direction","geometry")
+hs_bus_stop=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/bus_stop_hsinchu.shp") %>% select(-DRTS_ty)
+colnames(hs_bus_stop)=c("RouteUID","RouteName","SubRouteUID","SubRouteName","StopUID","StopName","StopBoarding","StopSequence","PositionLat","Positionon",
+                        "weekday","weekend","geometry")
+hs_village=filter(taiwan_village, COUNTYNAME %in% c("·s¦Ë¿¤","·s¦Ë¥«")) %>% select(VILLCODE, COUNTYNAME, TOWNNAME, VILLNAME, COUNTYCODE, TOWNCODE)
+hs_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/hsinchu_youbike.shp")
+
+
 
 
 # Add data files to project
