@@ -35,7 +35,6 @@ hs_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWsp
 
 
 
-
 # Add data files to project
 usethis::use_data(hsinchu_bus_route, overwrite=T)
 usethis::use_data(hsinchu_scenicSpot, overwrite=T)
@@ -52,6 +51,11 @@ usethis::use_data(TRA_ridership, overwrite=T)
 usethis::use_data(TRA_station, overwrite=T)
 usethis::use_data(taiwan_school, overwrite=T)
 usethis::use_data(taipei_mrt_station_buf, overwrite=T)
+usethis::use_data(hs_bus_route, overwrite=T)
+usethis::use_data(hs_bus_stop, overwrite=T)
+usethis::use_data(hs_village, overwrite=T)
+usethis::use_data(hs_youbike, overwrite=T)
+
 
 
 # upload the files to GitHub
@@ -67,6 +71,7 @@ usethis::use_git()
 devtools::install_github("ChiaJung-Yeh/TWspdata", force=T)
 library(TWspdata)
 
+TWspdata::hs
 TWspdata::TRA_station
 TWspdata::hsinchu_scenicSpot
 
@@ -74,4 +79,28 @@ TWspdata::hsinchu_scenicSpot
 ggplot()+
   geom_sf(data=taipei_mrt_route, size=1)+
   geom_sf(data=taipei_cycle_path, color="blue")
+
+
+
+
+
+TWspdata::hs_bus_route
+TWspdata::hs_bus_stop
+TWspdata::hs_village
+TWspdata::hs_youbike
+TWspdata::hsinchu_bus_route
+TWspdata::hsinchu_scenicSpot
+TWspdata::taipei_cycle_path
+TWspdata::taipei_mrt_route
+TWspdata::taipei_mrt_station
+TWspdata::taipei_mrt_station_buf
+TWspdata::taipei_village_map
+TWspdata::taipei_youbike
+TWspdata::taiwan_county
+TWspdata::taiwan_school
+TWspdata::taiwan_town
+TWspdata::taiwan_village
+TWspdata::TRA_line
+TWspdata::TRA_ridership
+TWspdata::TRA_station
 
