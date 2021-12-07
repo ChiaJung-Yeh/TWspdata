@@ -1,7 +1,7 @@
 # TWspdata
 TWspdata provides spatial data of Taiwan. Data provided are mainly for the use of examples in book Spatial Analysis with R. Please refer to the Bookdown website attached [*here*](https://chiajung-yeh.github.io/Spatial-Analysis/).  
 
-變數名稱                          | 資料
+變數名稱                          |                資料
 ------------------------------| :---------------------------|
 hs_bus_route                     | 新竹縣市公車路線  
 hs_bus_stop                      | 新竹縣市公車站牌  
