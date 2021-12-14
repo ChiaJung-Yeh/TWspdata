@@ -58,14 +58,8 @@ usethis::use_git()
 devtools::install_github("ChiaJung-Yeh/TWspdata", force=T)
 library(TWspdata)
 
-TWspdata::hs
-TWspdata::TRA_station
-TWspdata::hsinchu_scenicSpot
+TWspdata::tw_county_main
+TWspdata::taiwan_peak
 
 
-
-library(tmap)
-tmap_mode("view")
-tm_shape(taiwan_peak)+
-  tm_dots()
 
