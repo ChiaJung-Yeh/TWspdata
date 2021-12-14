@@ -2,7 +2,7 @@
 \alias{TW_spdata}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+TW_spdata
 }
 \description{
 TWspdata provides spatial data of Taiwan. Data provided are mainly for the use of examples in book Spatial Analysis with R. Please refer to the Bookdown website attached \href{https://chiajung-yeh.github.io/Spatial-Analysis/}{here}.
