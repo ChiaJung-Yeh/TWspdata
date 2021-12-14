@@ -26,7 +26,7 @@ TWspdata provides spatial data of Taiwan. Data provided are mainly for the use o
   \item{taiwan_county}{Counties of Taiwan.}
   \item{taiwan_peak}{100 mountain peaks in Taiwan.}
   \item{taiwan_school}{All schools in Taiwan, including elementary, junior high, senior high, vocational school, and the university.}
-  \item{taiwan_town}{Towns of Taipei City.}
+  \item{taiwan_town}{Towns of Taiwan.}
   \item{taiwan_village}{Villages of Taiwan.}
   \item{TRA_line}{Railway line of TRA. Note that it is a text file.}
   \item{TRA_ridership}{Ridership of TRA in November, 2020. Note that it is a text file.}
