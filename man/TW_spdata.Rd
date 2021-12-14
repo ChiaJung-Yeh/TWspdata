@@ -15,8 +15,8 @@ TWspdata provides spatial data of Taiwan. Data provided are mainly for the use o
   \item{hs_bus_stop}{Bus stop in Hsinchu City and County.}
   \item{hs_village}{Villages of Hsinchu City and County.}
   \item{hs_youbike}{YouBike station in Hsinchu City.}
-  \item{hsinchu_bus_route}{Bus route in Hsinchu City. Note that this is a text file.}
-  \item{hsinchu_scenicSpot}{Attraction sites in Hsinchu City. Note that this is a text file.}
+  \item{hsinchu_bus_route}{Bus route in Hsinchu City. Note that it is a text file.}
+  \item{hsinchu_scenicSpot}{Attraction sites in Hsinchu City. Note that it is a text file.}
   \item{taipei_cycle_path}{Cycle path in Taipei City.}
   \item{taipei_mrt_route}{MRT route of Taipei Metro.}
   \item{taipei_mrt_station}{MRT station of Taipei Metro.}
@@ -28,9 +28,9 @@ TWspdata provides spatial data of Taiwan. Data provided are mainly for the use o
   \item{taiwan_school}{All schools in Taiwan, including elementary, junior high, senior high, vocational school, and the university.}
   \item{taiwan_town}{Towns of Taipei City.}
   \item{taiwan_village}{Villages of Taiwan.}
-  \item{TRA_line}{Railway line of TRA. Note that this is a text file.}
-  \item{TRA_ridership}{Ridership of TRA in November, 2020. Note that this is a text file.}
-  \item{TRA_station}{Railway stations of TRA. Note that this is a text file.}
+  \item{TRA_line}{Railway line of TRA. Note that it is a text file.}
+  \item{TRA_ridership}{Ridership of TRA in November, 2020. Note that it is a text file.}
+  \item{TRA_station}{Railway stations of TRA. Note that it is a text file.}
   \item{tw_county_main}{Counties of Taiwan. Note that it does not include outlying islands.}
 }
 \author{
