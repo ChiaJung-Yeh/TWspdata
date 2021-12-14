@@ -42,7 +42,7 @@ ggplot()+
 
 # Add data files to project
 usethis::use_data(tw_county_main, overwrite=T)
-usethis::use_data(hsinchu_bus_route, overwrite=T)
+usethis::use_data(taiwan_peak, overwrite=T)
 
 
 # upload the files to GitHub
@@ -61,7 +61,6 @@ library(TWspdata)
 TWspdata::hs
 TWspdata::TRA_station
 TWspdata::hsinchu_scenicSpot
-
 
 
 

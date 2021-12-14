@@ -16,9 +16,11 @@ taipei_mrt_station_buf       | 臺北捷運站點200公尺環域
 taipei_village_map            | 臺北市村里圖資  
 taipei_youbike                   | 臺北市公共自行車  
 taiwan_county                    | 臺灣縣市圖資  
+taiwan_peak                       | 臺灣百岳圖資
 taiwan_school                    | 臺灣學校圖資  
 taiwan_town                      | 臺灣鄉鎮市區圖資  
 taiwan_village                  | 臺灣村里圖資  
 TRA_line                          | 臺鐵路線（文字檔）  
 TRA_ridership                  |  臺鐵運量（文字檔）  
 TRA_station                      | 臺鐵站點（文字檔）  
+tw_county_main                | 臺灣本島圖資（去除離島）
