@@ -21,7 +21,7 @@ TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Sp
 taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
 taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
 write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station_buf.shp", layer_options="ENCODING=UTF-8")
-
+taiwan_factory=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_factory/taiwan_factory.shp")
 
 
 # Hsinchu Data
@@ -55,6 +55,7 @@ usethis::use_data(hs_bus_route, overwrite=T)
 usethis::use_data(hs_bus_stop, overwrite=T)
 usethis::use_data(hs_village, overwrite=T)
 usethis::use_data(hs_youbike, overwrite=T)
+usethis::use_data(taiwan_factory, overwrite=T)
 
 
 
