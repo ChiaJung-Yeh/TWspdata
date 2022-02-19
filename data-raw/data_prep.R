@@ -1,6 +1,7 @@
 library(sf)
 library(dplyr)
 library(ggplot2)
+library(TDX)
 
 # reference: https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
 
@@ -22,6 +23,7 @@ taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/
 taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
 write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station_buf.shp", layer_options="ENCODING=UTF-8")
 taiwan_factory=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_factory/taiwan_factory.shp")
+house_price=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/house_price/house_price.csv")
 
 
 # Hsinchu Data
@@ -30,7 +32,7 @@ colnames(hs_bus_route)=c("RouteUID","RouteName","SubRouteUID","Direction","geome
 hs_bus_stop=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/bus_stop_hsinchu.shp") %>% select(-DRTS_ty)
 colnames(hs_bus_stop)=c("RouteUID","RouteName","SubRouteUID","SubRouteName","StopUID","StopName","StopBoarding","StopSequence","PositionLat","Positionon",
                         "weekday","weekend","geometry")
-hs_village=filter(taiwan_village, COUNTYNAME %in% c("·s¦Ë¿¤","·s¦Ë¥«")) %>% select(VILLCODE, COUNTYNAME, TOWNNAME, VILLNAME, COUNTYCODE, TOWNCODE)
+hs_village=filter(taiwan_village, COUNTYNAME %in% c("æ–°ç«¹ç¸£","æ–°ç«¹æ˜¯")) %>% select(VILLCODE, COUNTYNAME, TOWNNAME, VILLNAME, COUNTYCODE, TOWNCODE)
 hs_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/hsinchu_youbike.shp")
 
 
