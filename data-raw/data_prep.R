@@ -33,7 +33,7 @@ colnames(hs_bus_route)=c("RouteUID","RouteName","SubRouteUID","Direction","geome
 hs_bus_stop=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/bus_stop_hsinchu.shp") %>% select(-DRTS_ty)
 colnames(hs_bus_stop)=c("RouteUID","RouteName","SubRouteUID","SubRouteName","StopUID","StopName","StopBoarding","StopSequence","PositionLat","Positionon",
                         "weekday","weekend","geometry")
-hs_village=filter(taiwan_village, COUNTYNAME %in% c("?s?˿?","?s?˥?")) %>% select(VILLCODE, COUNTYNAME, TOWNNAME, VILLNAME, COUNTYCODE, TOWNCODE)
+hs_village=filter(taiwan_village, COUNTYNAME %in% c("新竹縣","新竹市")) %>% select(VILLCODE, COUNTYNAME, TOWNNAME, VILLNAME, COUNTYCODE, TOWNCODE)
 hs_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/hsinchu_youbike.shp")
 
 
