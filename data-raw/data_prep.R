@@ -19,7 +19,7 @@ taiwan_village=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv")
-taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/school/school.csv")
+taiwan_school=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_school/taiwan_school.csv")
 taipei_mrt_station_buf=st_buffer(taipei_mrt_station, 200)
 write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_mrt/taipei_mrt_station_buf.shp", layer_options="ENCODING=UTF-8")
 taiwan_factory=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_factory/taiwan_factory.shp")
