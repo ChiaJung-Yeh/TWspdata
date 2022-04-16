@@ -2,6 +2,7 @@ library(sf)
 library(dplyr)
 library(ggplot2)
 library(TDX)
+library(data.table)
 
 # reference: https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
 
@@ -16,6 +17,7 @@ taipei_youbike=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/
 taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_county.shp")
 taiwan_town=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_town.shp")
 taiwan_village=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_village.shp")
+taiwan_village_pop=fread("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_village_pop.csv", encoding="UTF-8")
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv")
@@ -25,6 +27,7 @@ write_sf(taipei_mrt_station_buf, "C:/Users/ASUS/Desktop/R Transportation/R Githu
 taiwan_factory=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_factory/taiwan_factory.shp")
 house_price=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/house_price/house_price.csv")
 youbike_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_youbike/youbike_ridership.csv")
+Miaoli_Road_Network=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/Miaoli_Road_Network/Miaoli_Road_Network.shp")
 
 
 # Hsinchu Data
@@ -49,6 +52,7 @@ usethis::use_data(taipei_youbike, overwrite=T)
 usethis::use_data(taiwan_county, overwrite=T)
 usethis::use_data(taiwan_town, overwrite=T)
 usethis::use_data(taiwan_village, overwrite=T)
+usethis::use_data(taiwan_village_pop, overwrite=T)
 usethis::use_data(TRA_line, overwrite=T)
 usethis::use_data(TRA_ridership, overwrite=T)
 usethis::use_data(TRA_station, overwrite=T)
@@ -61,7 +65,7 @@ usethis::use_data(hs_youbike, overwrite=T)
 usethis::use_data(taiwan_factory, overwrite=T)
 usethis::use_data(house_price, overwrite=T)
 usethis::use_data(youbike_ridership, overwrite=T)
-
+usethis::use_data(Miaoli_Road_Network, overwrite=T)
 
 
 # upload the files to GitHub
