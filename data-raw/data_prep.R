@@ -29,7 +29,7 @@ house_price=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Sp
 shuangho_house_price=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/house_price/shuangho_house_price.csv")
 youbike_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taipei_youbike/youbike_ridership.csv")
 Miaoli_Road_Network=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/Miaoli_Road_Network/Miaoli_Road_Network.shp")
-
+convenience_store=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/convenience_store/convenience_store.csv")
 
 # Hsinchu Data
 hs_bus_route=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/TWspdata/hsinchu_data/bus_route_hsinchu.shp") %>% select(-DRTS_ty)
@@ -68,6 +68,7 @@ usethis::use_data(house_price, overwrite=T)
 usethis::use_data(shuangho_house_price, overwrite=T)
 usethis::use_data(youbike_ridership, overwrite=T)
 usethis::use_data(Miaoli_Road_Network, overwrite=T)
+usethis::use_data(convenience_store, overwrite=T)
 
 
 # upload the files to GitHub
