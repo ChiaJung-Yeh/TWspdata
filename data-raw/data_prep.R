@@ -18,6 +18,7 @@ taiwan_county=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/S
 taiwan_town=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_town.shp")
 taiwan_village=read_sf("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_village.shp")
 taiwan_village_pop=fread("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/taiwan_map/taiwan_village_pop.csv", encoding="UTF-8")
+taiwan_village_pop$VILLCODE=as.character(taiwan_village_pop$VILLCODE)
 TRA_line=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_line.csv", fileEncoding="UTF-8")
 TRA_ridership=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_ridership.csv")
 TRA_station=read.csv("C:/Users/ASUS/Desktop/R Transportation/R Github Project/Spatial-Analysis/data/TRA/TRA_station.csv")
