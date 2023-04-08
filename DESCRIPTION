@@ -1,0 +1,13 @@
+Package: TWspdata
+Type: Package
+Title: TWspdata provides spatial data of Taiwan.
+Version: 0.1.0
+Author: Chia Jung, Yeh
+Maintainer: The package maintainer <1328robert@gmail.com>
+Description: TWspdata provides spatial data of Taiwan. Data provided are mainly for the use of examples in book Spatial Analysis with R. Please refer to the Bookdown website attached below. https://chiajung-yeh.github.io/Spatial-Analysis/
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.1.1
